@@ -1,3 +1,4 @@
+#todo: finish get method.
 import _thread
 import threading
 import random
@@ -12,7 +13,7 @@ class packageUnit:
     info = None
     id = 0
     nextUnit = None
-
+    ext = None
     def __init__(self, info):
         self.info = info
 
@@ -34,4 +35,19 @@ class packageMenu:
         self.root = None
         self.size = 0
 
-#todo: the insert method
+    def insert(self, new_data, package_id, ext=None):
+        new = packageUnit(new_data)
+        new.id = package_id
+        new.ext = ext
+
+        if self.root is None:
+            self.root = new
+            self.size += 1
+            return
+        var = self.root
+        while var.nextUnit is not None:
+            var = var.nextUnit
+        var.nextUnit = new
+        self.size += 1
+
+
