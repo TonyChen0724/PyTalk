@@ -1,4 +1,4 @@
-#todo: finish get method.
+#todo: finish matchid method.539
 import _thread
 import threading
 import random
@@ -49,5 +49,19 @@ class packageMenu:
             var = var.nextUnit
         var.nextUnit = new
         self.size += 1
+
+    def get(self, id, ext = None, alias=[]):
+        if self.size == 0:
+            return None
+        else:
+            var = self.root
+            for i in range(0, self.size):
+                if var.id == id:
+                    if id == 0:
+                        # remains
+
+
+
+    def matchid(self, ida, idb, alias):
 
 
