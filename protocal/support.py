@@ -1,4 +1,4 @@
-#todo: finish matchid method.539
+#todo: analyseid -> match (510)
 import _thread
 import threading
 import random
@@ -61,7 +61,8 @@ class packageMenu:
                         # remains
 
 
+    def analyse_id
 
-    def matchid(self, ida, idb, alias):
+
 
 
